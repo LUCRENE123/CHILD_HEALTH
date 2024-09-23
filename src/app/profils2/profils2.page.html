@@ -1,0 +1,32 @@
+<!-- doctor-profil.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Profil du Médecin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-container">
+    <div class="profile-pic">
+      <img [src]="doctorProfile.photo || 'assets/default-profile.png'" alt="Photo du Médecin">
+    </div>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input [(ngModel)]="doctorProfile.name" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Hôpital</ion-label>
+        <ion-input [(ngModel)]="doctorProfile.hospital" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Années de Pratique</ion-label>
+        <ion-input [(ngModel)]="doctorProfile.experience" type="number" disabled></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Spécialité</ion-label>
+        <ion-input [(ngModel)]="doctorProfile.specialty" disabled></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>

@@ -1,0 +1,48 @@
+<ion-content [fullscreen]="true">
+
+  <div class="container">
+    <h1>Inscription</h1>
+    <form (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.name" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="registerData.email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" [(ngModel)]="registerData.password" name="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmer le mot de passe</ion-label>
+        <ion-input type="password" [(ngModel)]="registerData.confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Numéro de Licence Médicale</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.licenseNumber" name="licenseNumber" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Spécialité</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.specialty" name="specialty" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Hôpital/Clinique</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.hospital" name="hospital" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Années d'Expertise</ion-label>
+        <ion-input type="number" [(ngModel)]="registerData.yearsOfExperience" name="yearsOfExperience" required></ion-input>
+      </ion-item>
+      <ion-button [routerLink]="'/acceuil'" expand="block" type="submit" color="green">S'inscrire</ion-button>
+    </form>
+
+    <div class="login-link">
+      <ion-router-link [routerLink]="'/connecter'">
+        Connecter
+      </ion-router-link>
+    </div>
+  </div>
+  
+</ion-content>

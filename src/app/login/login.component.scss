@@ -1,0 +1,26 @@
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  h1 {
+    margin-bottom: 20px; /* Ajoutez de l'espace entre le titre et le formulaire */
+  }
+  
+  .login-link {
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .login-link a {
+    color: #00FF00;
+    text-decoration: none;
+  }
+  .button {
+    background-color: #00FF00; /* Bleu */
+    color: black;
+  }

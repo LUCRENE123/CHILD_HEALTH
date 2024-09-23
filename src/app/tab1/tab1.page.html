@@ -1,0 +1,16 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+   Acceuil
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card [routerLink]="['activity-detail', activity.id]" button *ngFor="let activity of (activityList | async)" >
+    <ion-img [src]="activity.image"></ion-img>
+    <ion-card-header>
+      <ion-card-title>{{activity.name}}</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+</ion-content>

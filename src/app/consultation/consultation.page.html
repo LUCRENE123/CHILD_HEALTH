@@ -1,0 +1,35 @@
+<!-- consultation  -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Consulter un Médecin</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="submitConsultation()" #consultationForm="ngForm">
+    <ion-item>
+      <ion-label position="floating">Nom et prénom de l'enfant</ion-label>
+      <ion-input name="nomPrenomEnfant" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Âge de l'enfant</ion-label>
+      <ion-input type="number" name="ageEnfant" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Sexe de l'enfant</ion-label>
+      <ion-select name="sexeEnfant" ngModel required>
+        <ion-select-option value="masculin">Masculin</ion-select-option>
+        <ion-select-option value="feminin">Féminin</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Symptômes de l'enfant</ion-label>
+      <ion-textarea name="symptomesEnfant" ngModel required></ion-textarea>
+    </ion-item>
+
+    <ion-button type="submit" expand="block">Envoyer</ion-button>
+  </form>
+</ion-content>

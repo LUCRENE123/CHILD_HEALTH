@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Detail du Docteur
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-img [src]="activitydetail.image"></ion-img>
+  <ion-card no-margin>
+  <ion-card-header>
+    <ion-card-title>
+      {{activitydetail?.name}}
+    </ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    {{activitydetail?.descroption}}
+  </ion-card-content>
+</ion-card>
+<ion-button (click)="consulterMedecin()">Consulter le Médecin</ion-button>
+</ion-content>

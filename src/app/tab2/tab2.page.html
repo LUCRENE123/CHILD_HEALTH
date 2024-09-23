@@ -1,0 +1,19 @@
+<!-- historipatient.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Historique des Consultations</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let consultation of patientHistory">
+      <ion-label>
+        <h2>{{ consultation.date }}</h2>
+        <p>Docteur: {{ consultation.doctor }}</p>
+        <p>Spécialité: {{ consultation.specialty }}</p>
+        <p>Notes: {{ consultation.notes }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

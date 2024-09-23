@@ -1,0 +1,35 @@
+<ion-content [fullscreen]="true" class="welcome-content">
+  <div class="welcome-box">
+    <h1 class="welcome-text">BIENVENUE SUR CHILD-HEALTH</h1>
+  </div>
+
+  <div class="user-options">
+    <ion-router-link [routerLink]="'/login'" class="button patient-button">
+      Patient
+    </ion-router-link>
+    <ion-router-link [routerLink]="'/login2'" class="button doctor-button">
+      Médecin
+    </ion-router-link>
+  </div>
+</ion-content>
+
+<script>
+  // Liste d'images pédiatriques en ligne
+  const images = [
+    'https://cdn.pixabay.com/photo/2016/11/14/04/00/baby-1821868_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2017/01/06/20/43/baby-1951022_960_720.jpg',
+    'https://cdn.pixabay.com/photo/2020/07/13/11/29/children-5395435_960_720.jpg'
+  ];
+
+  let currentIndex = 0;
+  function changeBackground() {
+    document.querySelector('ion-content').style.backgroundImage = `url(${images[currentIndex]})`;
+    currentIndex = (currentIndex + 1) % images.length;
+  }
+
+  // Changer l'image toutes les 2 minutes
+  setInterval(changeBackground, 120000);
+
+  // Appliquer la première image de fond au chargement
+  window.onload = changeBackground;
+</script>

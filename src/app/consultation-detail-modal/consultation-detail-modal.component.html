@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Détails de la Consultation</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>{{ consultation.nomPrenomEnfant }}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Âge: {{ consultation.ageEnfant }}</p>
+      <p>Sexe: {{ consultation.sexeEnfant }}</p>
+      <p>Symptômes: {{ consultation.symptomesEnfant }}</p>
+    </ion-card-content>
+  </ion-card>
+  
+  <ion-footer>
+    <ion-button expand="full" color="success" (click)="approve()">Approuver</ion-button>
+    <ion-button expand="full" color="danger" (click)="reject()">Rejeter</ion-button>
+  </ion-footer>
+</ion-content>

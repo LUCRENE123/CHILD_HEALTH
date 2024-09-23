@@ -1,0 +1,7 @@
+{
+  "name": "child_health",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

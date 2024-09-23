@@ -1,0 +1,55 @@
+<!-- patient-profile.page.html -->
+
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Profil du Patient</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="profile-container">
+    <ion-avatar class="profile-avatar">
+      <img src="assets/images/avatar.jpg" alt="Avatar">
+    </ion-avatar>
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Nom</ion-label>
+        <ion-input [(ngModel)]="patient.name" [readonly]="!editMode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Prénom</ion-label>
+        <ion-input [(ngModel)]="patient.firstName" [readonly]="!editMode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Email</ion-label>
+        <ion-input [(ngModel)]="patient.email" type="email" [readonly]="!editMode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Âge</ion-label>
+        <ion-input [(ngModel)]="patient.age" type="number" [readonly]="!editMode"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Sexe</ion-label>
+        <ion-select [(ngModel)]="patient.gender" [disabled]="!editMode">
+          <ion-select-option value="male">Homme</ion-select-option>
+          <ion-select-option value="female">Femme</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="stacked">Type d'abonnement</ion-label>
+        <ion-select [(ngModel)]="patient.subscriptionType" [disabled]="!editMode">
+          <ion-select-option value="basic">Basique</ion-select-option>
+          <ion-select-option value="premium">Premium</ion-select-option>
+          <ion-select-option value="vip">VIP</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+    <ion-button  (click)="toggleEditMode()">
+      <ion-icon name="create-outline"></ion-icon>
+      {{ editMode ? 'Enregistrer' : 'Modifier' }}
+    </ion-button>
+  </div>
+</ion-content>

@@ -1,0 +1,31 @@
+
+<ion-content [fullscreen]="true">
+  <ion-content>
+    <div class="container">
+      <h1>Inscription</h1>
+    </div>
+    <form (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Nom</ion-label>
+        <ion-input type="text" [(ngModel)]="registerData.name" name="name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="registerData.email" name="email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Mot de passe</ion-label>
+        <ion-input type="password" [(ngModel)]="registerData.password" name="password" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">Confirmer le mot de passe</ion-label>
+        <ion-input type="password" [(ngModel)]="registerData.confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+      <ion-button expand="block" type="submit" color="green">S'inscrire</ion-button>
+    </form>
+  <ion-router-link [routerLink]="'/connecter'">
+    connecter
+    </ion-router-link>
+  </ion-content>
+
+

@@ -1,0 +1,13 @@
+/* login.page.scss */
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 16px;
+}
+.button {
+  background-color: #00FF00;
+  color: black;
+}
